@@ -165,6 +165,11 @@ namespace ABSpriteEditor.Controls
 
         public void CentreOffset()
         {
+            // If there is no image
+            if (this.Image == null)
+                // Exit early
+                return;
+
             // Calculate the scaled size of the image
             var width = (this.Image.Width * this.ImageScale);
             var height = (this.Image.Height * this.ImageScale);
@@ -181,6 +186,11 @@ namespace ABSpriteEditor.Controls
         // whilst still fitting the image within the editor panel
         public void MaximiseScale()
         {
+            // If there is no image
+            if (this.Image == null)
+                // Exit early
+                return;
+
             // Derive the potential scale from the ratio between
             // the control's dimensions and the image's dimensions
             var xScale = (this.Width / this.Image.Width);
