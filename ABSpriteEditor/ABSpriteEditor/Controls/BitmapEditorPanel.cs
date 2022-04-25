@@ -186,8 +186,11 @@ namespace ABSpriteEditor.Controls
             var xScale = (this.Width / this.Image.Width);
             var yScale = (this.Height / this.Image.Height);
 
-            // Set the image scale to the least of the two scales
-            this.ImageScale = Math.Min(xScale, yScale);
+            // Select the least of the two scales
+            var smallerScale = Math.Min(xScale, yScale);
+
+            // Set the image scale, ensuring it is not less than 1
+            this.ImageScale = Math.Max(smallerScale, 1);
         }
 
         // Set the scale back to its minimum
