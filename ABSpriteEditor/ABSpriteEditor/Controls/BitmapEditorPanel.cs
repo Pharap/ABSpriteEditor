@@ -181,9 +181,12 @@ namespace ABSpriteEditor.Controls
         // whilst still fitting the image within the editor panel
         public void MaximiseScale()
         {
+            // Derive the potential scale from the ratio between
+            // the control's dimensions and the image's dimensions
             var xScale = (this.Width / this.Image.Width);
             var yScale = (this.Height / this.Image.Height);
 
+            // Set the image scale to the least of the two scales
             this.ImageScale = Math.Min(xScale, yScale);
         }
 
