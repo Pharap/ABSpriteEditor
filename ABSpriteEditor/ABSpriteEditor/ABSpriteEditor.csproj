@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{110C6CE2-2264-4037-9BD4-C2143246D849}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ABSpriteEditor</RootNamespace>
+    <AssemblyName>ABSpriteEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ABSpriteEditor.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>FrameIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\ActionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ActionPanel.Designer.cs">
+      <DependentUpon>ActionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BitmapEditorPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ColourSelectPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ColourSelectPanel.Designer.cs">
+      <DependentUpon>ColourSelectPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PaletteControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SpriteEditorPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SpriteEditorPanel.Designer.cs">
+      <DependentUpon>SpriteEditorPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SpriteEditorPanel.Methods.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ToolSelectPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ToolSelectPanel.Designer.cs">
+      <DependentUpon>ToolSelectPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExportForm.Designer.cs">
+      <DependentUpon>ExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LicenceEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LicenceEditForm.Designer.cs">
+      <DependentUpon>LicenceEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.Methods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewNamespaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewNamespaceForm.Designer.cs">
+      <DependentUpon>NewNamespaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sprites\IO\BitWriter.cs" />
+    <Compile Include="Sprites\IIdentifiable.cs" />
+    <Compile Include="Sprites\IO\SpriteCompression.cs" />
+    <Compile Include="Sprites\IO\SpriteFileWriterSettings.cs" />
+    <Compile Include="Sprites\IO\Xml\XmlSpriteFileHelper.cs" />
+    <Compile Include="Sprites\IO\Xml\SpriteFileReader.cs" />
+    <Compile Include="Sprites\IO\Xml\SpriteFileWriter.cs" />
+    <Compile Include="Sprites\ISpriteGroup.cs" />
+    <Compile Include="Sprites\ODRHelper.cs" />
+    <Compile Include="Utilities\BitmapHelper.cs" />
+    <Compile Include="Sprites\SpriteCollection.cs" />
+    <Compile Include="Sprites\SpriteGroupCollection.cs" />
+    <Compile Include="Tools\FloodFillTool.cs" />
+    <Compile Include="Tools\ITool.cs" />
+    <Compile Include="Tools\PixelSetTool.cs" />
+    <Compile Include="Tools\RectangleFillTool.cs" />
+    <Compile Include="Tools\RectangleOutlineTool.cs" />
+    <Compile Include="Utilities\ErrorLogHelper.cs" />
+    <Compile Include="Utilities\ErrorsHelper.cs" />
+    <Compile Include="Properties\ErrorStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sprites\Identifier.cs" />
+    <Compile Include="Forms\NewSpriteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewSpriteForm.Designer.cs">
+      <DependentUpon>NewSpriteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sprites\IO\IndentWriter.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sprites\Sprite.cs" />
+    <Compile Include="Forms\SpriteCreationInfo.cs" />
+    <Compile Include="Sprites\IO\SpriteEncoding.cs" />
+    <Compile Include="Sprites\SpriteFile.cs" />
+    <Compile Include="Sprites\IO\SpriteFormat.cs" />
+    <Compile Include="Sprites\SpriteFrame.cs" />
+    <Compile Include="Sprites\SpriteFrameCollection.cs" />
+    <Compile Include="Sprites\SpriteGroup.cs" />
+    <Compile Include="Sprites\SpriteHelper.cs" />
+    <Compile Include="Sprites\IO\SpriteFileWriter.cs" />
+    <Compile Include="Sprites\IO\SpriteFileHelper.cs" />
+    <Compile Include="Properties\WarningStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WarningStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\FileHelper.cs" />
+    <Compile Include="Utilities\GraphicsDrawingHelper.cs" />
+    <Compile Include="Utilities\PointHelper.cs" />
+    <Compile Include="Utilities\TreeTraversalHelper.cs" />
+    <Compile Include="Utilities\WarningsHelper.cs" />
+    <EmbeddedResource Include="Controls\ActionPanel.resx">
+      <DependentUpon>ActionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ColourSelectPanel.resx">
+      <DependentUpon>ColourSelectPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SpriteEditorPanel.resx">
+      <DependentUpon>SpriteEditorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ToolSelectPanel.resx">
+      <DependentUpon>ToolSelectPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportForm.resx">
+      <DependentUpon>ExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LicenceEditForm.resx">
+      <DependentUpon>LicenceEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewNamespaceForm.resx">
+      <DependentUpon>NewNamespaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\ErrorStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewSpriteForm.resx">
+      <DependentUpon>NewSpriteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\WarningStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WarningStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI\MenuStrip\NewIcon16.png" />
+    <None Include="Resources\UI\MenuStrip\NewIcon32.png" />
+    <None Include="Resources\UI\MenuStrip\OpenIcon16.png" />
+    <None Include="Resources\UI\MenuStrip\OpenIcon32.png" />
+    <None Include="Resources\UI\MenuStrip\SaveIcon16.png" />
+    <None Include="Resources\UI\MenuStrip\SaveIcon32.png" />
+    <None Include="Resources\UI\MenuStrip\SaveAsIcon16.png" />
+    <None Include="Resources\UI\MenuStrip\SaveAsIcon32.png" />
+    <None Include="Resources\UI\MenuStrip\CloseIcon16.png" />
+    <None Include="Resources\UI\MenuStrip\CloseIcon32.png" />
+    <None Include="Resources\UI\MenuStrip\CloseLeftIcon16.png" />
+    <None Include="Resources\UI\MenuStrip\CloseLeftIcon32.png" />
+    <None Include="Resources\UI\MenuStrip\CloseRightIcon16.png" />
+    <None Include="Resources\UI\MenuStrip\CloseRightIcon32.png" />
+    <None Include="Resources\UI\MenuStrip\CloseOtherIcon16.png" />
+    <None Include="Resources\UI\MenuStrip\CloseOtherIcon32.png" />
+    <None Include="Resources\UI\MenuStrip\ExportFileIcon16.png" />
+    <None Include="Resources\UI\MenuStrip\ExportFileIcon32.png" />
+    <None Include="Resources\UI\TabControl\SavedIcon32.png" />
+    <None Include="Resources\UI\TabControl\SavedIcon16.png" />
+    <None Include="Resources\UI\TabControl\UnsavedIcon32.png" />
+    <None Include="Resources\UI\TabControl\UnsavedIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\Tools\PixelSetIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\Tools\PixelSetIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\Tools\FloodFillIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\Tools\FloodFillIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\Tools\RectangleFillIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\Tools\RectangleFillIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\Tools\RectangleOutlineIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\Tools\RectangleOutlineIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\Colours\BlackButton16.png" />
+    <None Include="Resources\UI\SpriteEditor\Colours\BlackButton32.png" />
+    <None Include="Resources\UI\SpriteEditor\Colours\WhiteButton16.png" />
+    <None Include="Resources\UI\SpriteEditor\Colours\WhiteButton32.png" />
+    <None Include="Resources\UI\SpriteEditor\Colours\TransparentButton16.png" />
+    <None Include="Resources\UI\SpriteEditor\Colours\TransparentButton32.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\FileIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\FileIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\SpriteIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\SpriteIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\AddSpriteIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\AddSpriteIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\NamespaceIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\NamespaceIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\AddNamespaceIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\AddNamespaceIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\FrameIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\FrameIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\AddFrameIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\AddFrameIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\DeleteIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\DeleteIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\UpIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\UpIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\DownIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\DownIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\DuplicateIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\DuplicateIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\ExportImageIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\ExportImageIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\ZoomIn16.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\ZoomOut16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\ExportFileIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\FileIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\FrameIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\NamespaceIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\SpriteIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI\SpriteEditor\TreeView\EditLicenceIcon16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI\SpriteEditor\TreeView\EditLicenceIcon32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons\EditLicenceIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI\SpriteEditor\Actions\HorizontalFlipIcon16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI\SpriteEditor\Actions\HorizontalFlipIcon32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI\SpriteEditor\Actions\VerticalFlipIcon16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UI\SpriteEditor\Actions\VerticalFlipIcon32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FrameIcon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
