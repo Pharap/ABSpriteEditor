@@ -92,7 +92,7 @@ namespace ABSpriteEditor.Sprites.IO
                         var pixel = bitmap.GetPixel(column, y);
                         var average = Average(pixel);
 
-                        if (average > 127)
+                        if ((pixel.A == 0xFF) && (average > 127))
                             imageByte |= (byte)(1 << bitIndex);
 
                         if (pixel.A == 0xFF)
