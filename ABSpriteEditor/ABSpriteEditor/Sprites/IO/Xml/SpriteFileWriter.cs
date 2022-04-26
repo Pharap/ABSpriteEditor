@@ -132,7 +132,7 @@ namespace ABSpriteEditor.Sprites.IO.Xml
             this.writer.WriteStartElement("Sprite");
             {
                 // If the sprite's name is null
-                if (sprite.Name != null)
+                if (sprite.Name == null)
                     // Throw an argument exception
                     throw new ArgumentException("A Sprite within the SpriteFile had no Name");
 
