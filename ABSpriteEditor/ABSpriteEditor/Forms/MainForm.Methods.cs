@@ -305,13 +305,16 @@ namespace ABSpriteEditor.Forms
 
         private bool SaveSpriteFile(SpriteFile spriteFile, string filePath)
         {
+            #if !DEBUG
             try
             {
+            #endif
                 // Save the sprite file
                 XmlSpriteFileHelper.Save(spriteFile, filePath);
 
                 // Saving succeeded
                 return true;
+            #if !DEBUG
             }
             catch (Exception exception)
             {
@@ -324,6 +327,7 @@ namespace ABSpriteEditor.Forms
                 // Saving failed
                 return false;
             }
+            #endif
         }
 
         #endregion
