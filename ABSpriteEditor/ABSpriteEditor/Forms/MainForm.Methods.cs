@@ -309,10 +309,19 @@ namespace ABSpriteEditor.Forms
             try
             {
             #endif
-                // Save the sprite file
-                XmlSpriteFileHelper.Save(spriteFile, filePath);
+                // Create a temporary file path
+                var tempPath = Path.ChangeExtension(filePath, "temp");
 
-                // Saving succeeded
+                // Save the sprite file to a new file with the original's name
+                XmlSpriteFileHelper.Save(spriteFile, tempPath);
+
+                // Saving succeeded, so delete the original
+                File.Delete(filePath);
+
+                // Instate the temporary as the official version
+                File.Move(tempPath, filePath);
+
+                // Report success
                 return true;
             #if !DEBUG
             }
@@ -324,10 +333,10 @@ namespace ABSpriteEditor.Forms
                 // Inform the user that an exception has been logged
                 ErrorsHelper.ShowUnexpectedExceptionLoggedError(logFilePath);
 
-                // Saving failed
+                // Report failure
                 return false;
             }
-            #endif
+#endif
         }
 
         #endregion
