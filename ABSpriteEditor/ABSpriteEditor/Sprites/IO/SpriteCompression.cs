@@ -35,9 +35,11 @@ namespace ABSpriteEditor.Sprites.IO
         {
             var writer = new BitWriter();
 
-            writer.WriteBit(bitmap.GetPixel(0, 0) == Color.White);
+            var firstPixel = bitmap.GetPixel(0, 0);
 
-            foreach (var span in bytes)
+            writer.WriteBit(firstPixel.ToArgb() == SpriteColours.White.ToArgb());
+
+            foreach (var span in GenerateBitSpans(bytes))
             {
                 WriteCompressedLength(writer, span - 1);
             }
