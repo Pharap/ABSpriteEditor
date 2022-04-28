@@ -191,7 +191,7 @@ namespace ABSpriteEditor.Tools
                     return;
 
                 // If the y coordinate is out of bounds, exit early
-                if ((localPoint.Y < 0) || (localPoint.Y >= this.control.Image.Width))
+                if ((localPoint.Y < 0) || (localPoint.Y >= this.control.Image.Height))
                     return;
 
                 // Set the target pixel to the selected edit colour
