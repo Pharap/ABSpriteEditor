@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ABSpriteEditor.Sprites;
 
 //
 //  Copyright (C) 2022 Pharap (@Pharap)
@@ -22,7 +23,7 @@ namespace ABSpriteEditor.Controls
 {
     public partial class ColourSelectPanel : UserControl
     {
-        private Color colour = Color.Black;
+        private Color colour = SpriteColours.Black;
 
         public event EventHandler ColourChanged;
 
@@ -43,7 +44,7 @@ namespace ABSpriteEditor.Controls
         public void SelectBlack()
         {
             // Set the colour
-            this.ChangeColour(Color.Black);
+            this.ChangeColour(SpriteColours.Black);
 
             // Uncheck all colours
             this.UncheckAll(this.colourToolStrip);
@@ -58,7 +59,7 @@ namespace ABSpriteEditor.Controls
         public void SelectWhite()
         {
             // Set the colour
-            this.ChangeColour(Color.White);
+            this.ChangeColour(SpriteColours.White);
 
             // Uncheck all colours
             this.UncheckAll(this.colourToolStrip);
@@ -73,7 +74,7 @@ namespace ABSpriteEditor.Controls
         public void SelectTransparent()
         {
             // Set the colour
-            this.ChangeColour(Color.Transparent);
+            this.ChangeColour(SpriteColours.Transparent);
 
             // Uncheck all colours
             this.UncheckAll(this.colourToolStrip);

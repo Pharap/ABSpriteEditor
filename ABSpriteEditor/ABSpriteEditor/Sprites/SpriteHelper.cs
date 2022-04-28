@@ -64,9 +64,9 @@ namespace ABSpriteEditor.Sprites
         private static Color SimplifyColour(Color colour)
         {
             if(colour.A < 255)
-                return Color.Transparent;
+                return SpriteColours.Transparent;
 
-            return (Average(colour) > 127) ? Color.White : Color.Black;
+            return (Average(colour) > 127) ? SpriteColours.White : SpriteColours.Black;
         }
 
         // A helper function for figuring out the average value of a pixel
