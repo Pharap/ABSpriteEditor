@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 //
@@ -33,9 +34,15 @@ namespace ABSpriteEditor.Sprites.IO
 
         private static IEnumerable<byte> EnumerateCompressedBytes(Bitmap bitmap, IEnumerable<byte> bytes)
         {
-            var writer = new BitWriter();
+            if ((bitmap.Width < 1) || (bitmap.Height < 1))
+                throw new ArgumentException("bitmap must be at least 1x1");
 
-            var firstPixel = bitmap.GetPixel(0, 0);
+            return EnumerateCompressedBytes(bitmap.GetPixel(0, 0), bytes);
+        }
+
+        private static IEnumerable<byte> EnumerateCompressedBytes(Color firstPixel, IEnumerable<byte> bytes)
+        {
+            var writer = new BitWriter();
 
             writer.WriteBit(firstPixel.ToArgb() == SpriteColours.White.ToArgb());
 
