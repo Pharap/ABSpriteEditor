@@ -359,17 +359,23 @@ namespace ABSpriteEditor.Controls
             if (this.Image == null)
                 return;
 
+            // Calculate the region of the image that is actually visible
+            var rowStart = Math.Max(0, this.ToLocalY(this.ClientRectangle.Top));
+            var columnStart = Math.Max(0, this.ToLocalX(this.ClientRectangle.Left));            
+            var rowEnd = Math.Min(this.image.Height - 1, this.ToLocalY(this.ClientRectangle.Bottom));            
+            var columnEnd = Math.Min(this.image.Width - 1, this.ToLocalX(this.ClientRectangle.Right));
+
             // Prepare the grid pen for drawing the grid
             using (var gridPen = new Pen(this.GridColour))
             {
                 // Iterate through the rows of the active image
-                for (int row = 0; row < this.Image.Height; ++row)
+                for (int row = rowStart; row <= rowEnd; ++row)
                 {
                     // Calculate the y draw coordinate for the current pixel
                     var drawY = this.ToGlobalY(row);
 
                     // Iterate through the columns of the active image
-                    for (int column = 0; column < this.Image.Width; ++column)
+                    for (int column = columnStart; column <= columnEnd; ++column)
                     {
                         // Calculate the x draw coordinate for the current pixel
                         var drawX = this.ToGlobalX(column);
