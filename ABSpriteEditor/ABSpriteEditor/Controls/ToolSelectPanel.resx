@@ -143,18 +143,18 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="rectangleOutlineToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA/SURBVFhH7c4xDgAgCARB/v9ptTRBOyEWs8lVUExoazQv
-        dXqqXOp6eBwAAAAAAAAAAAAAwP+ArqVOT5XTKmICriPPMXFsQlUAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="rectangleFillToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABISURBVFhH7c7LCQAwCARR+2/LwvIDIUSvKznMwJ4i5Bld
         jealqiPlUufB3aWLf/aHbwAAAAAAAAAAAAAAAPgD0LhUdaQcrcwmgKoxqdhPfAMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="rectangleOutlineToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA/SURBVFhH7c4xDgAgCARB/v9ptTRBOyEWs8lVUExoazQv
+        dXqqXOp6eBwAAAAAAAAAAAAAwP+ArqVOT5XTKmICriPPMXFsQlUAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

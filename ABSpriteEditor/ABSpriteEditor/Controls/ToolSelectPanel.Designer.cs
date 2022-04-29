@@ -48,8 +48,8 @@
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pixelSetToolStripButton,
             this.floodFillToolStripButton,
-            this.rectangleOutlineToolStripButton,
-            this.rectangleFillToolStripButton});
+            this.rectangleFillToolStripButton,
+            this.rectangleOutlineToolStripButton});
             this.toolStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
