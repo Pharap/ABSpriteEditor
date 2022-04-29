@@ -342,11 +342,11 @@
             this.addFrameToolStripButton,
             this.removeToolStripButton,
             this.duplicateToolStripButton,
+            this.renameToolStripButton,
             this.moveUpToolStripButton,
             this.moveDownToolStripButton,
             this.zoomOutToolStripButton,
             this.zoomInToolStripButton,
-            this.renameToolStripButton,
             this.licenceEditToolStripButton});
             this.treeViewToolStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.treeViewToolStrip.Location = new System.Drawing.Point(130, 0);
