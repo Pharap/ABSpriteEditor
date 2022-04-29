@@ -74,6 +74,9 @@
             this.addNamespaceToSpriteFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editLicenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.renameToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.renameNamespaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.renameSpriteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editFrameTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.treeContextMenuStrip.SuspendLayout();
             this.namespaceContextMenuStrip.SuspendLayout();
             this.spriteContextMenuStrip.SuspendLayout();
@@ -143,10 +146,11 @@
             this.addNamespaceToNamespaceToolStripMenuItem,
             this.removeFromNamespaceToolStripMenuItem,
             this.duplicateNamespaceToolStripMenuItem,
+            this.renameNamespaceToolStripMenuItem,
             this.moveNamespaceUpToolStripMenuItem,
             this.moveNamespaceDownToolStripMenuItem});
             this.namespaceContextMenuStrip.Name = "treeViewContextMenuStrip";
-            this.namespaceContextMenuStrip.Size = new System.Drawing.Size(162, 136);
+            this.namespaceContextMenuStrip.Size = new System.Drawing.Size(162, 158);
             // 
             // addSpriteToNamespaceToolStripMenuItem
             // 
@@ -202,10 +206,11 @@
             this.addFrameToolStripMenuItem,
             this.removeFromSpriteToolStripMenuItem,
             this.duplicateSpriteToolStripMenuItem,
+            this.renameSpriteToolStripMenuItem,
             this.moveSpriteUpToolStripMenuItem,
             this.moveSpriteDownToolStripMenuItem});
             this.spriteContextMenuStrip.Name = "spriteContextMenuStrip";
-            this.spriteContextMenuStrip.Size = new System.Drawing.Size(139, 114);
+            this.spriteContextMenuStrip.Size = new System.Drawing.Size(139, 136);
             // 
             // addFrameToolStripMenuItem
             // 
@@ -252,11 +257,12 @@
             this.frameContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.removeFrameToolStripMenuItem,
             this.duplicateFrameToolStripMenuItem,
+            this.editFrameTextToolStripMenuItem,
             this.moveFrameUpToolStripMenuItem,
             this.moveFrameDownToolStripMenuItem,
             this.exportImageToolStripMenuItem});
             this.frameContextMenuStrip.Name = "frameContextMenuStrip";
-            this.frameContextMenuStrip.Size = new System.Drawing.Size(144, 114);
+            this.frameContextMenuStrip.Size = new System.Drawing.Size(144, 136);
             // 
             // removeFrameToolStripMenuItem
             // 
@@ -574,6 +580,27 @@
             this.renameToolStripButton.Size = new System.Drawing.Size(22, 20);
             this.renameToolStripButton.Text = "Rename";
             // 
+            // renameNamespaceToolStripMenuItem
+            // 
+            this.renameNamespaceToolStripMenuItem.Image = global::ABSpriteEditor.Properties.Resources.RenameIcon16;
+            this.renameNamespaceToolStripMenuItem.Name = "renameNamespaceToolStripMenuItem";
+            this.renameNamespaceToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.renameNamespaceToolStripMenuItem.Text = "Rena&me";
+            // 
+            // renameSpriteToolStripMenuItem
+            // 
+            this.renameSpriteToolStripMenuItem.Image = global::ABSpriteEditor.Properties.Resources.RenameIcon16;
+            this.renameSpriteToolStripMenuItem.Name = "renameSpriteToolStripMenuItem";
+            this.renameSpriteToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.renameSpriteToolStripMenuItem.Text = "Rena&me";
+            // 
+            // editFrameTextToolStripMenuItem
+            // 
+            this.editFrameTextToolStripMenuItem.Image = global::ABSpriteEditor.Properties.Resources.RenameIcon16;
+            this.editFrameTextToolStripMenuItem.Name = "editFrameTextToolStripMenuItem";
+            this.editFrameTextToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.editFrameTextToolStripMenuItem.Text = "Edit &Text";
+            // 
             // SpriteEditorPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -643,5 +670,8 @@
         private System.Windows.Forms.ToolStripButton licenceEditToolStripButton;
         private ActionPanel actionPanel;
         private System.Windows.Forms.ToolStripButton renameToolStripButton;
+        private System.Windows.Forms.ToolStripMenuItem renameNamespaceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem renameSpriteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editFrameTextToolStripMenuItem;
     }
 }
