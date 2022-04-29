@@ -75,25 +75,10 @@ namespace ABSpriteEditor.Controls
             this.selectedToolBox.BackgroundImage = this.floodFillToolStripButton.Image;
         }
 
-        public void SelectRectangleOutlineTool()
-        {
-            // Set the tool
-            this.ChangeTool(this.rectangleFillTool);
-
-            // Uncheck all tools
-            this.UncheckAll(this.toolStrip);
-
-            // Check the selected tool
-            this.rectangleOutlineToolStripButton.Checked = true;
-
-            // Update the display box
-            this.selectedToolBox.BackgroundImage = this.rectangleOutlineToolStripButton.Image;
-        }
-
         public void SelectRectangleFillTool()
         {
             // Set the tool
-            this.ChangeTool(this.rectangleOutlineTool);
+            this.ChangeTool(this.rectangleFillTool);
 
             // Uncheck all tools
             this.UncheckAll(this.toolStrip);
@@ -103,6 +88,21 @@ namespace ABSpriteEditor.Controls
 
             // Update the display box
             this.selectedToolBox.BackgroundImage = this.rectangleFillToolStripButton.Image;
+        }
+
+        public void SelectRectangleOutlineTool()
+        {
+            // Set the tool
+            this.ChangeTool(this.rectangleOutlineTool);
+
+            // Uncheck all tools
+            this.UncheckAll(this.toolStrip);
+
+            // Check the selected tool
+            this.rectangleOutlineToolStripButton.Checked = true;
+
+            // Update the display box
+            this.selectedToolBox.BackgroundImage = this.rectangleOutlineToolStripButton.Image;
         }
 
         #endregion
@@ -162,14 +162,14 @@ namespace ABSpriteEditor.Controls
             this.SelectFloodFillTool();
         }
 
-        private void rectangleOutlineToolStripButton_Click(object sender, EventArgs e)
-        {
-            this.SelectRectangleOutlineTool();
-        }
-
         private void rectangleFillToolStripButton_Click(object sender, EventArgs e)
         {
             this.SelectRectangleFillTool();
+        }
+
+        private void rectangleOutlineToolStripButton_Click(object sender, EventArgs e)
+        {
+            this.SelectRectangleOutlineTool();
         }
 
         #endregion
