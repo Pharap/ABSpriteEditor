@@ -121,22 +121,5 @@ namespace ABSpriteEditor.Controls
             // Raise after action event
             this.OnAfterAction(EventArgs.Empty);
         }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            // If there is no image
-            if (this.Image == null)
-                // Exit early
-                return;
-
-            // Raise before action event
-            this.OnBeforeAction(EventArgs.Empty);
-
-            // Defer to a helper class to vertically flip the image
-            BitmapHelper.RollLeft(this.Image, 2);
-
-            // Raise after action event
-            this.OnAfterAction(EventArgs.Empty);
-        }
     }
 }
