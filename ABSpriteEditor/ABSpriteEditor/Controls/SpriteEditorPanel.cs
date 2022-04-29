@@ -891,6 +891,34 @@ namespace ABSpriteEditor.Controls
             this.MoveNodeDownAt(contextMenuItem.Owner.Location);
         }
 
+        private void renameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Try to interpret the sender as a context menu
+            var contextMenuItem = sender as ToolStripDropDownItem;
+
+            // Assertion for debugging without the end user getting a crash
+            Debug.Assert(contextMenuItem != null, "'sender' was not a ToolStripDropDownItem");
+
+            // If the sender is not a context menu
+            if (contextMenuItem == null)
+                // Exit early
+                return;
+
+            // Localise the context menu's location to the tree view
+            var localPoint = this.treeView.PointToClient(contextMenuItem.Owner.Location);
+
+            // Try to get the node at the specified point
+            var node = this.treeView.GetNodeAt(localPoint);
+
+            // If no node was found
+            if (node == null)
+                // Exit early
+                return;
+
+            // Begin editing the node
+            node.BeginEdit();
+        }
+
         #endregion
 
         #region Sprite File Context Menu
