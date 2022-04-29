@@ -160,7 +160,6 @@ Sprites can only be exported to `.h` files
 These are features that are planned to appear in future versions, though I may not be actively working on them at the moment.
 
 * Display the compression ration of compressed images
-* Add a 'rename' option to the right click menu for tree nodes
 * Rotation of frames
 * 'Rolling' frames around an axis
 * Generating arrays for uncompressed frames
