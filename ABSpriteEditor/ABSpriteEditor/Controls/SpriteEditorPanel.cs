@@ -274,6 +274,7 @@ namespace ABSpriteEditor.Controls
                 this.addNamespaceToolStripButton.Enabled = true;
                 this.removeToolStripButton.Enabled = false;
                 this.duplicateToolStripButton.Enabled = false;
+                this.renameToolStripButton.Enabled = false;
                 this.moveUpToolStripButton.Enabled = false;
                 this.moveDownToolStripButton.Enabled = false;
             }
@@ -286,6 +287,7 @@ namespace ABSpriteEditor.Controls
                 this.addNamespaceToolStripButton.Enabled = true;
                 this.removeToolStripButton.Enabled = true;
                 this.duplicateToolStripButton.Enabled = true;
+                this.renameToolStripButton.Enabled = true;
                 this.moveUpToolStripButton.Enabled = true;
                 this.moveDownToolStripButton.Enabled = true;
             }
@@ -311,6 +313,7 @@ namespace ABSpriteEditor.Controls
                 this.addNamespaceToolStripButton.Enabled = false;
                 this.removeToolStripButton.Enabled = true;
                 this.duplicateToolStripButton.Enabled = true;
+                this.renameToolStripButton.Enabled = true;
                 this.moveUpToolStripButton.Enabled = true;
                 this.moveDownToolStripButton.Enabled = true;
             }
@@ -330,6 +333,7 @@ namespace ABSpriteEditor.Controls
                 this.addNamespaceToolStripButton.Enabled = false;
                 this.removeToolStripButton.Enabled = true;
                 this.duplicateToolStripButton.Enabled = true;
+                this.renameToolStripButton.Enabled = true;
                 this.moveUpToolStripButton.Enabled = true;
                 this.moveDownToolStripButton.Enabled = true;
             }
