@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActionPanel));
             this.actionStrip = new System.Windows.Forms.ToolStrip();
             this.horizontalFlipToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.flipVerticallyToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.actionStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,8 +42,7 @@
             this.actionStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.actionStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.horizontalFlipToolStripButton,
-            this.flipVerticallyToolStripButton,
-            this.toolStripButton1});
+            this.flipVerticallyToolStripButton});
             this.actionStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.actionStrip.Location = new System.Drawing.Point(0, 0);
             this.actionStrip.Name = "actionStrip";
@@ -78,17 +75,6 @@
             this.flipVerticallyToolStripButton.ToolTipText = "Flip Vertically\r\nFlips the frame vertically around the X axis.";
             this.flipVerticallyToolStripButton.Click += new System.EventHandler(this.flipVerticallyToolStripButton_Click);
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 45);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Visible = false;
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
             // ActionPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +93,5 @@
         private System.Windows.Forms.ToolStrip actionStrip;
         private System.Windows.Forms.ToolStripButton horizontalFlipToolStripButton;
         private System.Windows.Forms.ToolStripButton flipVerticallyToolStripButton;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
