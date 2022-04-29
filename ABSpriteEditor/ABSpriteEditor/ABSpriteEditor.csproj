@@ -13,6 +13,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -149,6 +149,7 @@
     <Compile Include="Tools\PixelSetTool.cs" />
     <Compile Include="Tools\RectangleFillTool.cs" />
     <Compile Include="Tools\RectangleOutlineTool.cs" />
+    <Compile Include="Sprites\SpriteColours.cs" />
     <Compile Include="Utilities\ErrorLogHelper.cs" />
     <Compile Include="Utilities\ErrorsHelper.cs" />
     <Compile Include="Properties\ErrorStrings.Designer.cs">
@@ -363,6 +364,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FrameIcon.ico" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\RenameIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\RenameIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\ZoomOut32.png" />
+    <None Include="Resources\UI\SpriteEditor\TreeView\ZoomIn32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
