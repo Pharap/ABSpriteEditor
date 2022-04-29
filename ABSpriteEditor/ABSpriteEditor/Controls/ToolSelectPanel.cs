@@ -78,7 +78,7 @@ namespace ABSpriteEditor.Controls
         public void SelectRectangleOutlineTool()
         {
             // Set the tool
-            this.ChangeTool(this.rectangleFillTool);
+            this.ChangeTool(this.rectangleOutlineTool);
 
             // Uncheck all tools
             this.UncheckAll(this.toolStrip);
@@ -93,7 +93,7 @@ namespace ABSpriteEditor.Controls
         public void SelectRectangleFillTool()
         {
             // Set the tool
-            this.ChangeTool(this.rectangleOutlineTool);
+            this.ChangeTool(this.rectangleFillTool);
 
             // Uncheck all tools
             this.UncheckAll(this.toolStrip);
