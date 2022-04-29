@@ -793,29 +793,9 @@ namespace ABSpriteEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ZoomIn32 {
-            get {
-                object obj = ResourceManager.GetObject("ZoomIn32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ZoomOut16 {
             get {
                 object obj = ResourceManager.GetObject("ZoomOut16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ZoomOut32 {
-            get {
-                object obj = ResourceManager.GetObject("ZoomOut32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
