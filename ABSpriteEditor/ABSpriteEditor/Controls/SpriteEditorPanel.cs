@@ -391,6 +391,9 @@ namespace ABSpriteEditor.Controls
                 // Show the user an error
                 ErrorsHelper.ShowInvalidNamespaceNameError();
 
+                // Cancel the edit
+                e.CancelEdit = true;
+
                 // Then exit
                 return;
             }
@@ -446,6 +449,9 @@ namespace ABSpriteEditor.Controls
             {
                 // Show the user an error
                 ErrorsHelper.ShowInvalidSpriteNameError();
+
+                // Cancel the edit
+                e.CancelEdit = true;
 
                 // Then exit
                 return;
