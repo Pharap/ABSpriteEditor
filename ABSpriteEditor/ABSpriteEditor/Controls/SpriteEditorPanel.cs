@@ -754,6 +754,16 @@ namespace ABSpriteEditor.Controls
             }
         }
 
+        private void renameToolStripButton_Click(object sender, EventArgs e)
+        {
+            // If the selected node is not null
+            if (this.treeView.SelectedNode != null)
+            {
+                // Begin editing the node's text
+                this.treeView.SelectedNode.BeginEdit();
+            }
+        }
+
         private void licenceEditToolStripButton_Click(object sender, EventArgs e)
         {
             this.EditLicence();

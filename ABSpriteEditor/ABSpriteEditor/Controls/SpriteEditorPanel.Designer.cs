@@ -579,6 +579,7 @@
             this.renameToolStripButton.Name = "renameToolStripButton";
             this.renameToolStripButton.Size = new System.Drawing.Size(22, 20);
             this.renameToolStripButton.Text = "Rename";
+            this.renameToolStripButton.Click += new System.EventHandler(this.renameToolStripButton_Click);
             // 
             // renameNamespaceToolStripMenuItem
             // 
