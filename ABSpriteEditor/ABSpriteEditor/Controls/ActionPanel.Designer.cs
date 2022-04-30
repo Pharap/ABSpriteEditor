@@ -90,6 +90,7 @@
             this.rotateLeftToolStripButton.Size = new System.Drawing.Size(36, 45);
             this.rotateLeftToolStripButton.Text = "Rotate Left";
             this.rotateLeftToolStripButton.ToolTipText = "Rotate Left\r\nRotates the image anticlockwise 90 degrees.";
+            this.rotateLeftToolStripButton.Click += new System.EventHandler(this.rotateLeftToolStripButton_Click);
             // 
             // rotateRightToolStripButton
             // 
@@ -102,6 +103,7 @@
             this.rotateRightToolStripButton.Size = new System.Drawing.Size(36, 45);
             this.rotateRightToolStripButton.Text = "Rotate Right";
             this.rotateRightToolStripButton.ToolTipText = "Rotate Right\r\nRotates the image clockwise 90 degrees.";
+            this.rotateRightToolStripButton.Click += new System.EventHandler(this.rotateRightToolStripButton_Click);
             // 
             // ActionPanel
             // 
