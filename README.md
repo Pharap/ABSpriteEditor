@@ -94,6 +94,8 @@ These are features that have already been implemented and are present and (in mo
 
 * Flip Horizontally - Flips the image around the X axis so that pixels above are swapped with pixels below
 * Flip Vertically - Flips the image around the Y axis so that pixels on the left are swapped with pixels on the right
+* Rotate Left - Rotates the image 90 degrees anticlockwise
+* Rotate Right - Rotates the image 90 degrees clockwise
 
 #### Editor Panel
 
@@ -160,7 +162,6 @@ Sprites can only be exported to `.h` files
 These are features that are planned to appear in future versions, though I may not be actively working on them at the moment.
 
 * Display the compression ration of compressed images
-* Rotation of frames
 * 'Rolling' frames around an axis
 * Generating arrays for uncompressed frames
 * More commenting
