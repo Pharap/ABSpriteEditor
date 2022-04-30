@@ -593,6 +593,46 @@ namespace ABSpriteEditor.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RotateLeftIcon16 {
+            get {
+                object obj = ResourceManager.GetObject("RotateLeftIcon16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RotateLeftIcon32 {
+            get {
+                object obj = ResourceManager.GetObject("RotateLeftIcon32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RotateRightIcon16 {
+            get {
+                object obj = ResourceManager.GetObject("RotateRightIcon16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RotateRightIcon32 {
+            get {
+                object obj = ResourceManager.GetObject("RotateRightIcon32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SaveAsIcon16 {
             get {
                 object obj = ResourceManager.GetObject("SaveAsIcon16", resourceCulture);

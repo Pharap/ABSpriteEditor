@@ -346,4 +346,16 @@
   <data name="ZoomOut32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UI\SpriteEditor\TreeView\ZoomOut32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RotateLeftIcon16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UI\SpriteEditor\Actions\RotateLeftIcon16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RotateLeftIcon32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UI\SpriteEditor\Actions\RotateLeftIcon32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RotateRightIcon16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UI\SpriteEditor\Actions\RotateRightIcon16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RotateRightIcon32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UI\SpriteEditor\Actions\RotateRightIcon32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
