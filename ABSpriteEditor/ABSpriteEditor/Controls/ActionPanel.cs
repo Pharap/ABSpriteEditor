@@ -121,5 +121,40 @@ namespace ABSpriteEditor.Controls
             // Raise after action event
             this.OnAfterAction(EventArgs.Empty);
         }
+
+        private void rotateLeftToolStripButton_Click(object sender, EventArgs e)
+        {
+            // If there is no image
+            if (this.Image == null)
+                // Exit early
+                return;
+
+            // Raise before action event
+            this.OnBeforeAction(EventArgs.Empty);
+
+            // Rotate 270 degrees clockwise
+            // (Equivalent to 90 degrees anticlockwise)
+            this.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
+
+            // Raise after action event
+            this.OnAfterAction(EventArgs.Empty);
+        }
+
+        private void rotateRightToolStripButton_Click(object sender, EventArgs e)
+        {
+            // If there is no image
+            if (this.Image == null)
+                // Exit early
+                return;
+
+            // Raise before action event
+            this.OnBeforeAction(EventArgs.Empty);
+
+            // Rotate 90 degrees clockwise
+            this.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+
+            // Raise after action event
+            this.OnAfterAction(EventArgs.Empty);
+        }
     }
 }

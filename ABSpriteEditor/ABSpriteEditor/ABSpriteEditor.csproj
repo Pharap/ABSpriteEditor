@@ -364,6 +364,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FrameIcon.ico" />
+    <None Include="Resources\UI\SpriteEditor\Actions\RotateRightIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\Actions\RotateRightIcon16.png" />
+    <None Include="Resources\UI\SpriteEditor\Actions\RotateLeftIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\Actions\RotateLeftIcon16.png" />
     <None Include="Resources\UI\SpriteEditor\TreeView\RenameIcon32.png" />
     <None Include="Resources\UI\SpriteEditor\TreeView\RenameIcon16.png" />
     <None Include="Resources\UI\SpriteEditor\TreeView\ZoomOut32.png" />
