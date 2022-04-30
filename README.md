@@ -79,16 +79,16 @@ These are features that have already been implemented and are present and (in mo
 
 #### Colours
 
-* Black <kbd>1</kbd>
-* White <kbd>2</kbd>
-* Transparent <kbd>3</kbd>
+* Black - Shortcut: <kbd>1</kbd>
+* White - Shortcut: <kbd>2</kbd>
+* Transparent - Shortcut: <kbd>3</kbd>
 
 #### Tools
 
-* Pencil - Fills a single pixel at a time, can be dragged <kbd>P</kbd>
-* Flood Fill - Your standard 'fill a connected group of same-colour pixels' flood-fill algorithm <kbd>F</kbd>
-* Outline Rectangle - Draws an unfilled rectangle, thus an 'outline' of a rectangle <kbd>O</kbd>
-* Fill Rectangle - Draws a filled rectangle, thus a solid block of colour <kbd>R</kbd>
+* Pencil - Shortcut: <kbd>P</kbd> - Fills a single pixel at a time, can be dragged
+* Flood Fill - Shortcut: <kbd>F</kbd> - Your standard 'fill a connected group of same-colour pixels' flood-fill algorithm
+* Outline Rectangle - Shortcut: <kbd>O</kbd> - Draws an unfilled rectangle, thus an 'outline' of a rectangle
+* Fill Rectangle - Shortcut: <kbd>R</kbd> - Draws a filled rectangle, thus a solid block of colour
 
 #### Actions
 
