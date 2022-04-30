@@ -98,8 +98,8 @@ namespace ABSpriteEditor.Controls
             // Raise before action event
             this.OnBeforeAction(EventArgs.Empty);
 
-            // Defer to a helper class to horizontally flip the image
-            BitmapHelper.FlipHorizontally(this.Image);
+            // Horizontally flip the image
+            this.Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
 
             // Raise after action event
             this.OnAfterAction(EventArgs.Empty);
@@ -115,8 +115,8 @@ namespace ABSpriteEditor.Controls
             // Raise before action event
             this.OnBeforeAction(EventArgs.Empty);
 
-            // Defer to a helper class to vertically flip the image
-            BitmapHelper.FlipVertically(this.Image);
+            // Vertically flip the image
+            this.Image.RotateFlip(RotateFlipType.RotateNoneFlipY);
 
             // Raise after action event
             this.OnAfterAction(EventArgs.Empty);
