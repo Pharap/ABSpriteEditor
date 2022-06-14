@@ -93,6 +93,9 @@ namespace ABSpriteEditor.Controls
             // Recognise that the changed that have been made are unsaved
             this.saved = false;
 
+            // Update the preview
+            this.previewPictureBox.Image = this.bitmapEditor.Image;
+
             // Raise the edited event
             this.OnEdited(EventArgs.Empty);
         }

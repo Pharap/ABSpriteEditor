@@ -68,15 +68,17 @@
             this.zoomOutToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.zoomInToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.licenceEditToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.actionPanel = new ABSpriteEditor.Controls.ActionPanel();
-            this.colourSelectPanel = new ABSpriteEditor.Controls.ColourSelectPanel();
-            this.toolSelectPanel = new ABSpriteEditor.Controls.ToolSelectPanel();
-            this.bitmapEditor = new ABSpriteEditor.Controls.BitmapEditorPanel();
             this.exportFileDialogue = new System.Windows.Forms.SaveFileDialog();
             this.spriteFileContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addSpriteToSpriteFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNamespaceToSpriteFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editLicenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.leftSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.previewPictureBox = new ABSpriteEditor.Controls.InterpolatedPictureBox();
+            this.actionPanel = new ABSpriteEditor.Controls.ActionPanel();
+            this.colourSelectPanel = new ABSpriteEditor.Controls.ColourSelectPanel();
+            this.toolSelectPanel = new ABSpriteEditor.Controls.ToolSelectPanel();
+            this.bitmapEditor = new ABSpriteEditor.Controls.BitmapEditorPanel();
             this.treeContextMenuStrip.SuspendLayout();
             this.namespaceContextMenuStrip.SuspendLayout();
             this.spriteContextMenuStrip.SuspendLayout();
@@ -87,6 +89,11 @@
             this.splitContainer.SuspendLayout();
             this.treeViewToolStrip.SuspendLayout();
             this.spriteFileContextMenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.leftSplitContainer)).BeginInit();
+            this.leftSplitContainer.Panel1.SuspendLayout();
+            this.leftSplitContainer.Panel2.SuspendLayout();
+            this.leftSplitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.previewPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView
@@ -104,7 +111,7 @@
             this.treeView.Margin = new System.Windows.Forms.Padding(0);
             this.treeView.Name = "treeView";
             this.treeView.PathSeparator = "::";
-            this.treeView.Size = new System.Drawing.Size(130, 378);
+            this.treeView.Size = new System.Drawing.Size(130, 245);
             this.treeView.TabIndex = 0;
             this.treeView.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeView_AfterLabelEdit);
             this.treeView.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.treeView_DrawNode);
@@ -218,13 +225,13 @@
             this.moveSpriteUpToolStripMenuItem,
             this.moveSpriteDownToolStripMenuItem});
             this.spriteContextMenuStrip.Name = "spriteContextMenuStrip";
-            this.spriteContextMenuStrip.Size = new System.Drawing.Size(153, 158);
+            this.spriteContextMenuStrip.Size = new System.Drawing.Size(139, 136);
             // 
             // addFrameToolStripMenuItem
             // 
             this.addFrameToolStripMenuItem.Image = global::ABSpriteEditor.Properties.Resources.AddFrameIcon16;
             this.addFrameToolStripMenuItem.Name = "addFrameToolStripMenuItem";
-            this.addFrameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addFrameToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.addFrameToolStripMenuItem.Text = "Add &Frame";
             this.addFrameToolStripMenuItem.Click += new System.EventHandler(this.addFrameToolStripMenuItem_Click);
             // 
@@ -232,7 +239,7 @@
             // 
             this.removeFromSpriteToolStripMenuItem.Image = global::ABSpriteEditor.Properties.Resources.DeleteIcon16;
             this.removeFromSpriteToolStripMenuItem.Name = "removeFromSpriteToolStripMenuItem";
-            this.removeFromSpriteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.removeFromSpriteToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.removeFromSpriteToolStripMenuItem.Text = "&Remove";
             this.removeFromSpriteToolStripMenuItem.Click += new System.EventHandler(this.removeFromSpriteToolStripMenuItem_Click);
             // 
@@ -240,7 +247,7 @@
             // 
             this.duplicateSpriteToolStripMenuItem.Image = global::ABSpriteEditor.Properties.Resources.DuplicateIcon16;
             this.duplicateSpriteToolStripMenuItem.Name = "duplicateSpriteToolStripMenuItem";
-            this.duplicateSpriteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.duplicateSpriteToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.duplicateSpriteToolStripMenuItem.Text = "Du&plicate";
             this.duplicateSpriteToolStripMenuItem.Click += new System.EventHandler(this.duplicateSpriteToolStripMenuItem_Click);
             // 
@@ -248,7 +255,7 @@
             // 
             this.renameSpriteToolStripMenuItem.Image = global::ABSpriteEditor.Properties.Resources.RenameIcon16;
             this.renameSpriteToolStripMenuItem.Name = "renameSpriteToolStripMenuItem";
-            this.renameSpriteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.renameSpriteToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.renameSpriteToolStripMenuItem.Text = "Rena&me";
             this.renameSpriteToolStripMenuItem.Click += new System.EventHandler(this.renameToolStripMenuItem_Click);
             // 
@@ -256,7 +263,7 @@
             // 
             this.moveSpriteUpToolStripMenuItem.Image = global::ABSpriteEditor.Properties.Resources.UpIcon16;
             this.moveSpriteUpToolStripMenuItem.Name = "moveSpriteUpToolStripMenuItem";
-            this.moveSpriteUpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.moveSpriteUpToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.moveSpriteUpToolStripMenuItem.Text = "Move &Up";
             this.moveSpriteUpToolStripMenuItem.Click += new System.EventHandler(this.moveUpToolStripMenuItem_Click);
             // 
@@ -264,7 +271,7 @@
             // 
             this.moveSpriteDownToolStripMenuItem.Image = global::ABSpriteEditor.Properties.Resources.DownIcon16;
             this.moveSpriteDownToolStripMenuItem.Name = "moveSpriteDownToolStripMenuItem";
-            this.moveSpriteDownToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.moveSpriteDownToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.moveSpriteDownToolStripMenuItem.Text = "Move &Down";
             this.moveSpriteDownToolStripMenuItem.Click += new System.EventHandler(this.moveDownToolStripMenuItem_Click);
             // 
@@ -339,8 +346,7 @@
             // 
             // splitContainer.Panel1
             // 
-            this.splitContainer.Panel1.Controls.Add(this.treeViewToolStrip);
-            this.splitContainer.Panel1.Controls.Add(this.treeView);
+            this.splitContainer.Panel1.Controls.Add(this.leftSplitContainer);
             // 
             // splitContainer.Panel2
             // 
@@ -375,7 +381,7 @@
             this.treeViewToolStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.treeViewToolStrip.Location = new System.Drawing.Point(130, 0);
             this.treeViewToolStrip.Name = "treeViewToolStrip";
-            this.treeViewToolStrip.Size = new System.Drawing.Size(24, 378);
+            this.treeViewToolStrip.Size = new System.Drawing.Size(24, 245);
             this.treeViewToolStrip.TabIndex = 3;
             // 
             // addNamespaceToolStripButton
@@ -505,9 +511,82 @@
             this.licenceEditToolStripButton.Image = global::ABSpriteEditor.Properties.Resources.EditLicenceIcon16;
             this.licenceEditToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.licenceEditToolStripButton.Name = "licenceEditToolStripButton";
-            this.licenceEditToolStripButton.Size = new System.Drawing.Size(22, 20);
+            this.licenceEditToolStripButton.Size = new System.Drawing.Size(23, 20);
             this.licenceEditToolStripButton.Text = "Edit Licence";
             this.licenceEditToolStripButton.Click += new System.EventHandler(this.licenceEditToolStripButton_Click);
+            // 
+            // exportFileDialogue
+            // 
+            this.exportFileDialogue.DefaultExt = "png";
+            this.exportFileDialogue.Filter = "PNG Files|*.png|BMP Files|*.bmp;*.dib|ICO Files|*.ico|GIF Files|*.gif|TIFF Files|" +
+    "*.tif;*.tiff|JPEG Files|*.jpg;*.jpeg;*.jpe;*.jfif";
+            this.exportFileDialogue.Title = "Export";
+            // 
+            // spriteFileContextMenuStrip
+            // 
+            this.spriteFileContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addSpriteToSpriteFileToolStripMenuItem,
+            this.addNamespaceToSpriteFileToolStripMenuItem,
+            this.editLicenceToolStripMenuItem});
+            this.spriteFileContextMenuStrip.Name = "spriteFileContextMenuStrip";
+            this.spriteFileContextMenuStrip.Size = new System.Drawing.Size(162, 70);
+            // 
+            // addSpriteToSpriteFileToolStripMenuItem
+            // 
+            this.addSpriteToSpriteFileToolStripMenuItem.Image = global::ABSpriteEditor.Properties.Resources.AddSpriteIcon16;
+            this.addSpriteToSpriteFileToolStripMenuItem.Name = "addSpriteToSpriteFileToolStripMenuItem";
+            this.addSpriteToSpriteFileToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.addSpriteToSpriteFileToolStripMenuItem.Text = "Add &Sprite";
+            this.addSpriteToSpriteFileToolStripMenuItem.Click += new System.EventHandler(this.addSpriteToolStripButton_Click);
+            this.addSpriteToSpriteFileToolStripMenuItem.DisplayStyleChanged += new System.EventHandler(this.addNamespaceToolStripButton_Click);
+            // 
+            // addNamespaceToSpriteFileToolStripMenuItem
+            // 
+            this.addNamespaceToSpriteFileToolStripMenuItem.Image = global::ABSpriteEditor.Properties.Resources.AddNamespaceIcon16;
+            this.addNamespaceToSpriteFileToolStripMenuItem.Name = "addNamespaceToSpriteFileToolStripMenuItem";
+            this.addNamespaceToSpriteFileToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.addNamespaceToSpriteFileToolStripMenuItem.Text = "Add &Namespace";
+            this.addNamespaceToSpriteFileToolStripMenuItem.Click += new System.EventHandler(this.addNamespaceToolStripButton_Click);
+            // 
+            // editLicenceToolStripMenuItem
+            // 
+            this.editLicenceToolStripMenuItem.Image = global::ABSpriteEditor.Properties.Resources.EditLicenceIcon16;
+            this.editLicenceToolStripMenuItem.Name = "editLicenceToolStripMenuItem";
+            this.editLicenceToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.editLicenceToolStripMenuItem.Text = "Edit &Licence";
+            this.editLicenceToolStripMenuItem.Click += new System.EventHandler(this.editLicenceToolStripMenuItem_Click);
+            // 
+            // leftSplitContainer
+            // 
+            this.leftSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.leftSplitContainer.Location = new System.Drawing.Point(0, 0);
+            this.leftSplitContainer.Name = "leftSplitContainer";
+            this.leftSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // leftSplitContainer.Panel1
+            // 
+            this.leftSplitContainer.Panel1.Controls.Add(this.treeView);
+            this.leftSplitContainer.Panel1.Controls.Add(this.treeViewToolStrip);
+            // 
+            // leftSplitContainer.Panel2
+            // 
+            this.leftSplitContainer.Panel2.Controls.Add(this.previewPictureBox);
+            this.leftSplitContainer.Size = new System.Drawing.Size(154, 378);
+            this.leftSplitContainer.SplitterDistance = 245;
+            this.leftSplitContainer.TabIndex = 4;
+            // 
+            // previewPictureBox
+            // 
+            this.previewPictureBox.BackColor = System.Drawing.SystemColors.Control;
+            this.previewPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.previewPictureBox.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.previewPictureBox.Location = new System.Drawing.Point(0, 0);
+            this.previewPictureBox.Name = "previewPictureBox";
+            this.previewPictureBox.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.Half;
+            this.previewPictureBox.Size = new System.Drawing.Size(154, 129);
+            this.previewPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.previewPictureBox.TabIndex = 0;
+            this.previewPictureBox.TabStop = false;
             // 
             // actionPanel
             // 
@@ -564,47 +643,6 @@
             this.bitmapEditor.ImageEndEdit += new System.EventHandler(this.bitmapEditor_ImageEndEdit);
             this.bitmapEditor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bitmapEditor_KeyDown);
             // 
-            // exportFileDialogue
-            // 
-            this.exportFileDialogue.DefaultExt = "png";
-            this.exportFileDialogue.Filter = "PNG Files|*.png|BMP Files|*.bmp;*.dib|ICO Files|*.ico|GIF Files|*.gif|TIFF Files|" +
-    "*.tif;*.tiff|JPEG Files|*.jpg;*.jpeg;*.jpe;*.jfif";
-            this.exportFileDialogue.Title = "Export";
-            // 
-            // spriteFileContextMenuStrip
-            // 
-            this.spriteFileContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addSpriteToSpriteFileToolStripMenuItem,
-            this.addNamespaceToSpriteFileToolStripMenuItem,
-            this.editLicenceToolStripMenuItem});
-            this.spriteFileContextMenuStrip.Name = "spriteFileContextMenuStrip";
-            this.spriteFileContextMenuStrip.Size = new System.Drawing.Size(162, 70);
-            // 
-            // addSpriteToSpriteFileToolStripMenuItem
-            // 
-            this.addSpriteToSpriteFileToolStripMenuItem.Image = global::ABSpriteEditor.Properties.Resources.AddSpriteIcon16;
-            this.addSpriteToSpriteFileToolStripMenuItem.Name = "addSpriteToSpriteFileToolStripMenuItem";
-            this.addSpriteToSpriteFileToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.addSpriteToSpriteFileToolStripMenuItem.Text = "Add &Sprite";
-            this.addSpriteToSpriteFileToolStripMenuItem.Click += new System.EventHandler(this.addSpriteToolStripButton_Click);
-            this.addSpriteToSpriteFileToolStripMenuItem.DisplayStyleChanged += new System.EventHandler(this.addNamespaceToolStripButton_Click);
-            // 
-            // addNamespaceToSpriteFileToolStripMenuItem
-            // 
-            this.addNamespaceToSpriteFileToolStripMenuItem.Image = global::ABSpriteEditor.Properties.Resources.AddNamespaceIcon16;
-            this.addNamespaceToSpriteFileToolStripMenuItem.Name = "addNamespaceToSpriteFileToolStripMenuItem";
-            this.addNamespaceToSpriteFileToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.addNamespaceToSpriteFileToolStripMenuItem.Text = "Add &Namespace";
-            this.addNamespaceToSpriteFileToolStripMenuItem.Click += new System.EventHandler(this.addNamespaceToolStripButton_Click);
-            // 
-            // editLicenceToolStripMenuItem
-            // 
-            this.editLicenceToolStripMenuItem.Image = global::ABSpriteEditor.Properties.Resources.EditLicenceIcon16;
-            this.editLicenceToolStripMenuItem.Name = "editLicenceToolStripMenuItem";
-            this.editLicenceToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.editLicenceToolStripMenuItem.Text = "Edit &Licence";
-            this.editLicenceToolStripMenuItem.Click += new System.EventHandler(this.editLicenceToolStripMenuItem_Click);
-            // 
             // SpriteEditorPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -623,6 +661,11 @@
             this.treeViewToolStrip.ResumeLayout(false);
             this.treeViewToolStrip.PerformLayout();
             this.spriteFileContextMenuStrip.ResumeLayout(false);
+            this.leftSplitContainer.Panel1.ResumeLayout(false);
+            this.leftSplitContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.leftSplitContainer)).EndInit();
+            this.leftSplitContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.previewPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -677,5 +720,7 @@
         private System.Windows.Forms.ToolStripMenuItem renameNamespaceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem renameSpriteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editFrameTextToolStripMenuItem;
+        private System.Windows.Forms.SplitContainer leftSplitContainer;
+        private InterpolatedPictureBox previewPictureBox;
     }
 }
