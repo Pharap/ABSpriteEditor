@@ -83,6 +83,9 @@
     <Compile Include="Controls\ColourSelectPanel.Designer.cs">
       <DependentUpon>ColourSelectPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\InterpolatedPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\PaletteControl.cs">
       <SubType>Component</SubType>
     </Compile>
