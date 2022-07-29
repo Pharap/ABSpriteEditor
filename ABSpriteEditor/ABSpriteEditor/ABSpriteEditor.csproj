@@ -367,6 +367,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FrameIcon.ico" />
+    <None Include="Resources\UI\SpriteEditor\Actions\NudgeUp32.png" />
+    <None Include="Resources\UI\SpriteEditor\Actions\NudgeUp16.png" />
+    <None Include="Resources\UI\SpriteEditor\Actions\NudgeRight32.png" />
+    <None Include="Resources\UI\SpriteEditor\Actions\NudgeRight16.png" />
+    <None Include="Resources\UI\SpriteEditor\Actions\NudgeLeft32.png" />
+    <None Include="Resources\UI\SpriteEditor\Actions\NudgeLeft16.png" />
+    <None Include="Resources\UI\SpriteEditor\Actions\NudgeDown32.png" />
+    <None Include="Resources\UI\SpriteEditor\Actions\NudgeDown16.png" />
     <None Include="Resources\UI\SpriteEditor\Actions\RotateRightIcon32.png" />
     <None Include="Resources\UI\SpriteEditor\Actions\RotateRightIcon16.png" />
     <None Include="Resources\UI\SpriteEditor\Actions\RotateLeftIcon32.png" />
