@@ -222,6 +222,35 @@ namespace ABSpriteEditor.Controls
                 case Keys.O:
                     this.toolSelectPanel.SelectRectangleOutlineTool();
                     return;
+
+                case Keys.Up:
+                    this.actionPanel.RollUp();
+                    return;
+
+                case Keys.Down:
+                    this.actionPanel.RollDown();
+                    return;
+
+                case Keys.Left:
+                    this.actionPanel.RollLeft();
+                    return;
+
+                case Keys.Right:
+                    this.actionPanel.RollRight();
+                    return;
+            }
+        }
+
+        private void bitmapEditor_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            switch(e.KeyCode)
+            {
+                case Keys.Up:
+                case Keys.Down:
+                case Keys.Left:
+                case Keys.Right:
+                    e.IsInputKey = true;
+                    return;
             }
         }
 

@@ -33,6 +33,10 @@
             this.flipVerticallyToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.rotateLeftToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.rotateRightToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.rollLeftToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.rollRightToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.rollUpToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.rollDownToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.actionStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +50,11 @@
             this.horizontalFlipToolStripButton,
             this.flipVerticallyToolStripButton,
             this.rotateLeftToolStripButton,
-            this.rotateRightToolStripButton});
+            this.rotateRightToolStripButton,
+            this.rollLeftToolStripButton,
+            this.rollRightToolStripButton,
+            this.rollUpToolStripButton,
+            this.rollDownToolStripButton});
             this.actionStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.actionStrip.Location = new System.Drawing.Point(0, 0);
             this.actionStrip.Name = "actionStrip";
@@ -105,6 +113,58 @@
             this.rotateRightToolStripButton.ToolTipText = "Rotate Right\r\nRotates the image clockwise 90 degrees.";
             this.rotateRightToolStripButton.Click += new System.EventHandler(this.rotateRightToolStripButton_Click);
             // 
+            // rollLeftToolStripButton
+            // 
+            this.rollLeftToolStripButton.BackColor = System.Drawing.Color.Transparent;
+            this.rollLeftToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.rollLeftToolStripButton.Image = global::ABSpriteEditor.Properties.Resources.NudgeLeft32;
+            this.rollLeftToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.rollLeftToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.rollLeftToolStripButton.Name = "rollLeftToolStripButton";
+            this.rollLeftToolStripButton.Size = new System.Drawing.Size(36, 45);
+            this.rollLeftToolStripButton.Text = "Roll Left";
+            this.rollLeftToolStripButton.ToolTipText = "Roll Left\r\nRolls the frame left along the X axis.";
+            this.rollLeftToolStripButton.Click += new System.EventHandler(this.rollLeftToolStripButton_Click);
+            // 
+            // rollRightToolStripButton
+            // 
+            this.rollRightToolStripButton.BackColor = System.Drawing.Color.Transparent;
+            this.rollRightToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.rollRightToolStripButton.Image = global::ABSpriteEditor.Properties.Resources.NudgeRight32;
+            this.rollRightToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.rollRightToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.rollRightToolStripButton.Name = "rollRightToolStripButton";
+            this.rollRightToolStripButton.Size = new System.Drawing.Size(36, 45);
+            this.rollRightToolStripButton.Text = "Roll Right";
+            this.rollRightToolStripButton.ToolTipText = "Roll Right\r\nRolls the frame right along the X axis.";
+            this.rollRightToolStripButton.Click += new System.EventHandler(this.rollRightToolStripButton_Click);
+            // 
+            // rollUpToolStripButton
+            // 
+            this.rollUpToolStripButton.BackColor = System.Drawing.Color.Transparent;
+            this.rollUpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.rollUpToolStripButton.Image = global::ABSpriteEditor.Properties.Resources.NudgeUp32;
+            this.rollUpToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.rollUpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.rollUpToolStripButton.Name = "rollUpToolStripButton";
+            this.rollUpToolStripButton.Size = new System.Drawing.Size(36, 45);
+            this.rollUpToolStripButton.Text = "Roll Up";
+            this.rollUpToolStripButton.ToolTipText = "Roll Up\r\nRolls the frame up along the Y axis.";
+            this.rollUpToolStripButton.Click += new System.EventHandler(this.rollUpToolStripButton_Click);
+            // 
+            // rollDownToolStripButton
+            // 
+            this.rollDownToolStripButton.BackColor = System.Drawing.Color.Transparent;
+            this.rollDownToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.rollDownToolStripButton.Image = global::ABSpriteEditor.Properties.Resources.NudgeDown32;
+            this.rollDownToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.rollDownToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.rollDownToolStripButton.Name = "rollDownToolStripButton";
+            this.rollDownToolStripButton.Size = new System.Drawing.Size(36, 45);
+            this.rollDownToolStripButton.Text = "Roll Down";
+            this.rollDownToolStripButton.ToolTipText = "Roll Down\r\nRolls the frame down along the Y axis.";
+            this.rollDownToolStripButton.Click += new System.EventHandler(this.rollDownToolStripButton_Click);
+            // 
             // ActionPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,5 +185,9 @@
         private System.Windows.Forms.ToolStripButton flipVerticallyToolStripButton;
         private System.Windows.Forms.ToolStripButton rotateLeftToolStripButton;
         private System.Windows.Forms.ToolStripButton rotateRightToolStripButton;
+        private System.Windows.Forms.ToolStripButton rollLeftToolStripButton;
+        private System.Windows.Forms.ToolStripButton rollRightToolStripButton;
+        private System.Windows.Forms.ToolStripButton rollUpToolStripButton;
+        private System.Windows.Forms.ToolStripButton rollDownToolStripButton;
     }
 }

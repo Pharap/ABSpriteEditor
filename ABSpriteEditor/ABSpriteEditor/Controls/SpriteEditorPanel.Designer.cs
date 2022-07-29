@@ -56,6 +56,7 @@
             this.moveFrameDownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
+            this.leftSplitContainer = new System.Windows.Forms.SplitContainer();
             this.treeViewToolStrip = new System.Windows.Forms.ToolStrip();
             this.addNamespaceToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.addSpriteToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -73,7 +74,6 @@
             this.addSpriteToSpriteFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNamespaceToSpriteFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editLicenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.leftSplitContainer = new System.Windows.Forms.SplitContainer();
             this.previewPictureBox = new ABSpriteEditor.Controls.InterpolatedPictureBox();
             this.actionPanel = new ABSpriteEditor.Controls.ActionPanel();
             this.colourSelectPanel = new ABSpriteEditor.Controls.ColourSelectPanel();
@@ -87,12 +87,12 @@
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
-            this.treeViewToolStrip.SuspendLayout();
-            this.spriteFileContextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.leftSplitContainer)).BeginInit();
             this.leftSplitContainer.Panel1.SuspendLayout();
             this.leftSplitContainer.Panel2.SuspendLayout();
             this.leftSplitContainer.SuspendLayout();
+            this.treeViewToolStrip.SuspendLayout();
+            this.spriteFileContextMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.previewPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -358,6 +358,25 @@
             this.splitContainer.SplitterDistance = 156;
             this.splitContainer.TabIndex = 3;
             // 
+            // leftSplitContainer
+            // 
+            this.leftSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.leftSplitContainer.Location = new System.Drawing.Point(0, 0);
+            this.leftSplitContainer.Name = "leftSplitContainer";
+            this.leftSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // leftSplitContainer.Panel1
+            // 
+            this.leftSplitContainer.Panel1.Controls.Add(this.treeView);
+            this.leftSplitContainer.Panel1.Controls.Add(this.treeViewToolStrip);
+            // 
+            // leftSplitContainer.Panel2
+            // 
+            this.leftSplitContainer.Panel2.Controls.Add(this.previewPictureBox);
+            this.leftSplitContainer.Size = new System.Drawing.Size(154, 378);
+            this.leftSplitContainer.SplitterDistance = 245;
+            this.leftSplitContainer.TabIndex = 4;
+            // 
             // treeViewToolStrip
             // 
             this.treeViewToolStrip.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -556,25 +575,6 @@
             this.editLicenceToolStripMenuItem.Text = "Edit &Licence";
             this.editLicenceToolStripMenuItem.Click += new System.EventHandler(this.editLicenceToolStripMenuItem_Click);
             // 
-            // leftSplitContainer
-            // 
-            this.leftSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.leftSplitContainer.Location = new System.Drawing.Point(0, 0);
-            this.leftSplitContainer.Name = "leftSplitContainer";
-            this.leftSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // leftSplitContainer.Panel1
-            // 
-            this.leftSplitContainer.Panel1.Controls.Add(this.treeView);
-            this.leftSplitContainer.Panel1.Controls.Add(this.treeViewToolStrip);
-            // 
-            // leftSplitContainer.Panel2
-            // 
-            this.leftSplitContainer.Panel2.Controls.Add(this.previewPictureBox);
-            this.leftSplitContainer.Size = new System.Drawing.Size(154, 378);
-            this.leftSplitContainer.SplitterDistance = 245;
-            this.leftSplitContainer.TabIndex = 4;
-            // 
             // previewPictureBox
             // 
             this.previewPictureBox.BackColor = System.Drawing.SystemColors.Control;
@@ -642,6 +642,7 @@
             this.bitmapEditor.ImageChanged += new System.EventHandler(this.bitmapEditor_ImageChanged);
             this.bitmapEditor.ImageEndEdit += new System.EventHandler(this.bitmapEditor_ImageEndEdit);
             this.bitmapEditor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bitmapEditor_KeyDown);
+            this.bitmapEditor.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.bitmapEditor_PreviewKeyDown);
             // 
             // SpriteEditorPanel
             // 
@@ -658,13 +659,13 @@
             this.splitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
             this.splitContainer.ResumeLayout(false);
-            this.treeViewToolStrip.ResumeLayout(false);
-            this.treeViewToolStrip.PerformLayout();
-            this.spriteFileContextMenuStrip.ResumeLayout(false);
             this.leftSplitContainer.Panel1.ResumeLayout(false);
             this.leftSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.leftSplitContainer)).EndInit();
             this.leftSplitContainer.ResumeLayout(false);
+            this.treeViewToolStrip.ResumeLayout(false);
+            this.treeViewToolStrip.PerformLayout();
+            this.spriteFileContextMenuStrip.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.previewPictureBox)).EndInit();
             this.ResumeLayout(false);
 
