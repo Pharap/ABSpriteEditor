@@ -53,6 +53,81 @@ namespace ABSpriteEditor.Controls
 
         #region Methods
 
+        #region Actions
+
+        public void FlipHorizontally()
+        {
+            // If there is no image
+            if (this.Image == null)
+                // Exit early
+                return;
+
+            // Raise before action event
+            this.OnBeforeAction(EventArgs.Empty);
+
+            // Horizontally flip the image
+            this.Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
+
+            // Raise after action event
+            this.OnAfterAction(EventArgs.Empty);
+        }
+
+        public void FlipVertically()
+        {
+            // If there is no image
+            if (this.Image == null)
+                // Exit early
+                return;
+
+            // Raise before action event
+            this.OnBeforeAction(EventArgs.Empty);
+
+            // Vertically flip the image
+            this.Image.RotateFlip(RotateFlipType.RotateNoneFlipY);
+
+            // Raise after action event
+            this.OnAfterAction(EventArgs.Empty);
+        }
+
+        public void RotateLeft()
+        {
+            // If there is no image
+            if (this.Image == null)
+                // Exit early
+                return;
+
+            // Raise before action event
+            this.OnBeforeAction(EventArgs.Empty);
+
+            // Rotate 270 degrees clockwise
+            // (Equivalent to 90 degrees anticlockwise)
+            this.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
+
+            // Raise after action event
+            this.OnAfterAction(EventArgs.Empty);
+        }
+
+        public void RotateRight()
+        {
+            // If there is no image
+            if (this.Image == null)
+                // Exit early
+                return;
+
+            // Raise before action event
+            this.OnBeforeAction(EventArgs.Empty);
+
+            // Rotate 90 degrees clockwise
+            this.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+
+            // Raise after action event
+            this.OnAfterAction(EventArgs.Empty);
+        }
+
+        #endregion
+
+        #region Event Handlers
+
         private void OnImageChanged(EventArgs e)
 		{
 			// Cache the handler
@@ -88,73 +163,26 @@ namespace ABSpriteEditor.Controls
 
         #endregion
 
+        #endregion
+
         private void flipHorizontallyToolStripButton_Click(object sender, EventArgs e)
         {
-            // If there is no image
-            if (this.Image == null)
-                // Exit early
-                return;
-
-            // Raise before action event
-            this.OnBeforeAction(EventArgs.Empty);
-
-            // Horizontally flip the image
-            this.Image.RotateFlip(RotateFlipType.RotateNoneFlipX);
-
-            // Raise after action event
-            this.OnAfterAction(EventArgs.Empty);
+            this.FlipHorizontally();
         }
 
         private void flipVerticallyToolStripButton_Click(object sender, EventArgs e)
         {
-            // If there is no image
-            if (this.Image == null)
-                // Exit early
-                return;
-
-            // Raise before action event
-            this.OnBeforeAction(EventArgs.Empty);
-
-            // Vertically flip the image
-            this.Image.RotateFlip(RotateFlipType.RotateNoneFlipY);
-
-            // Raise after action event
-            this.OnAfterAction(EventArgs.Empty);
+            this.FlipVertically();
         }
 
         private void rotateLeftToolStripButton_Click(object sender, EventArgs e)
         {
-            // If there is no image
-            if (this.Image == null)
-                // Exit early
-                return;
-
-            // Raise before action event
-            this.OnBeforeAction(EventArgs.Empty);
-
-            // Rotate 270 degrees clockwise
-            // (Equivalent to 90 degrees anticlockwise)
-            this.Image.RotateFlip(RotateFlipType.Rotate270FlipNone);
-
-            // Raise after action event
-            this.OnAfterAction(EventArgs.Empty);
+            this.RotateLeft();
         }
 
         private void rotateRightToolStripButton_Click(object sender, EventArgs e)
         {
-            // If there is no image
-            if (this.Image == null)
-                // Exit early
-                return;
-
-            // Raise before action event
-            this.OnBeforeAction(EventArgs.Empty);
-
-            // Rotate 90 degrees clockwise
-            this.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
-
-            // Raise after action event
-            this.OnAfterAction(EventArgs.Empty);
+            this.RotateRight();
         }
     }
 }
