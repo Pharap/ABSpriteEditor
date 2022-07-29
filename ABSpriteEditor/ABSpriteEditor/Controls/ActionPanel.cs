@@ -25,9 +25,13 @@ namespace ABSpriteEditor.Controls
     {
         private Bitmap image;
 
+        #region Events
+
         public event EventHandler ImageChanged;
         public event EventHandler BeforeAction;
         public event EventHandler AfterAction;
+
+        #endregion
 
         public ActionPanel()
         {
@@ -124,6 +128,74 @@ namespace ABSpriteEditor.Controls
             this.OnAfterAction(EventArgs.Empty);
         }
 
+        public void RollLeft()
+        {
+            // If there is no image
+            if (this.Image == null)
+                // Exit early
+                return;
+
+            // Raise before action event
+            this.OnBeforeAction(EventArgs.Empty);
+
+            // Roll the image left
+            BitmapHelper.RollLeft(this.Image);
+
+            // Raise after action event
+            this.OnAfterAction(EventArgs.Empty);
+        }
+
+        public void RollRight()
+        {
+            // If there is no image
+            if (this.Image == null)
+                // Exit early
+                return;
+
+            // Raise before action event
+            this.OnBeforeAction(EventArgs.Empty);
+
+            // Roll the image right
+            BitmapHelper.RollRight(this.Image);
+
+            // Raise after action event
+            this.OnAfterAction(EventArgs.Empty);
+        }
+
+        public void RollUp()
+        {
+            // If there is no image
+            if (this.Image == null)
+                // Exit early
+                return;
+
+            // Raise before action event
+            this.OnBeforeAction(EventArgs.Empty);
+
+            // Roll the image up
+            BitmapHelper.RollUp(this.Image);
+
+            // Raise after action event
+            this.OnAfterAction(EventArgs.Empty);
+        }
+
+        public void RollDown()
+        {
+            // If there is no image
+            if (this.Image == null)
+                // Exit early
+                return;
+
+            // Raise before action event
+            this.OnBeforeAction(EventArgs.Empty);
+
+            // Roll the image down
+            BitmapHelper.RollDown(this.Image);
+
+            // Raise after action event
+            this.OnAfterAction(EventArgs.Empty);
+        }
+
         #endregion
 
         #region Event Handlers
@@ -165,6 +237,8 @@ namespace ABSpriteEditor.Controls
 
         #endregion
 
+        #region Event Handlers
+
         private void flipHorizontallyToolStripButton_Click(object sender, EventArgs e)
         {
             this.FlipHorizontally();
@@ -184,5 +258,27 @@ namespace ABSpriteEditor.Controls
         {
             this.RotateRight();
         }
+
+        private void rollLeftToolStripButton_Click(object sender, EventArgs e)
+        {
+            this.RollLeft();
+        }
+
+        private void rollRightToolStripButton_Click(object sender, EventArgs e)
+        {
+            this.RollRight();
+        }
+
+        private void rollUpToolStripButton_Click(object sender, EventArgs e)
+        {
+            this.RollUp();
+        }
+
+        private void rollDownToolStripButton_Click(object sender, EventArgs e)
+        {
+            this.RollDown();
+        }
+
+        #endregion
     }
 }
