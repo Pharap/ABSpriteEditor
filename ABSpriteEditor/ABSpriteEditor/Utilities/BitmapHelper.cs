@@ -642,5 +642,33 @@ namespace ABSpriteEditor.Utilities
         }
 
         #endregion
+
+        #region Inversion
+
+        public static Color Invert(Color colour)
+        {
+            var alpha = colour.A;
+            var red = (byte.MaxValue - colour.R);
+            var green = (byte.MaxValue - colour.G);
+            var blue = (byte.MaxValue - colour.B);
+
+            return Color.FromArgb(alpha, red, green, blue);
+        }
+
+        public static void Invert(Bitmap bitmap)
+        {
+            // Iterate through all pixels of the bitmap
+            for (int y = 0; y < bitmap.Height; ++y)
+                for (int x = 0; x < bitmap.Width; ++x)
+                {
+                    // Retrieve the value of the current pixe
+                    var colour = bitmap.GetPixel(x, y);
+
+                    // Set the current pixel to the inverse of the retrieved value
+                    bitmap.SetPixel(x, y, Invert(colour));
+                }
+        }
+
+        #endregion
     }
 }

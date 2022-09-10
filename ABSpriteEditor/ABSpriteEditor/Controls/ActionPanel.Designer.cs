@@ -37,6 +37,7 @@
             this.rollRightToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.rollUpToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.rollDownToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.invertToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.actionStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +55,8 @@
             this.rollLeftToolStripButton,
             this.rollRightToolStripButton,
             this.rollUpToolStripButton,
-            this.rollDownToolStripButton});
+            this.rollDownToolStripButton,
+            this.invertToolStripButton});
             this.actionStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.actionStrip.Location = new System.Drawing.Point(0, 0);
             this.actionStrip.Name = "actionStrip";
@@ -165,6 +167,21 @@
             this.rollDownToolStripButton.ToolTipText = "Roll Down\r\nRolls the frame down along the Y axis.";
             this.rollDownToolStripButton.Click += new System.EventHandler(this.rollDownToolStripButton_Click);
             // 
+            // invertToolStripButton
+            // 
+            this.invertToolStripButton.BackColor = System.Drawing.Color.Transparent;
+            this.invertToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.invertToolStripButton.Image = global::ABSpriteEditor.Properties.Resources.InvertIcon32;
+            this.invertToolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.invertToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.invertToolStripButton.Name = "invertToolStripButton";
+            this.invertToolStripButton.Size = new System.Drawing.Size(36, 45);
+            this.invertToolStripButton.Text = "Invert Pixels";
+            this.invertToolStripButton.ToolTipText = "Invert Pixels\r\nInverts the values of all the pixels in the image.\r\n• Black pixels" +
+    " become white.\r\n• White pixels become black.\r\n• Transparent pixels remain transp" +
+    "arent.";
+            this.invertToolStripButton.Click += new System.EventHandler(this.invertToolStripButton_Click);
+            // 
             // ActionPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,5 +206,6 @@
         private System.Windows.Forms.ToolStripButton rollRightToolStripButton;
         private System.Windows.Forms.ToolStripButton rollUpToolStripButton;
         private System.Windows.Forms.ToolStripButton rollDownToolStripButton;
+        private System.Windows.Forms.ToolStripButton invertToolStripButton;
     }
 }
