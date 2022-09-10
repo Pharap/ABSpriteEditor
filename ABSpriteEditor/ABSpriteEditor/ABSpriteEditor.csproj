@@ -367,6 +367,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FrameIcon.ico" />
+    <None Include="Resources\UI\SpriteEditor\Actions\InvertIcon32.png" />
+    <None Include="Resources\UI\SpriteEditor\Actions\InvertIcon16.png" />
     <None Include="Resources\UI\SpriteEditor\Actions\NudgeUp32.png" />
     <None Include="Resources\UI\SpriteEditor\Actions\NudgeUp16.png" />
     <None Include="Resources\UI\SpriteEditor\Actions\NudgeRight32.png" />

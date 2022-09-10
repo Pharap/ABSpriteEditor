@@ -196,6 +196,23 @@ namespace ABSpriteEditor.Controls
             this.OnAfterAction(EventArgs.Empty);
         }
 
+        public void Invert()
+        {
+            // If there is no image
+            if (this.Image == null)
+                // Exit early
+                return;
+
+            // Raise before action event
+            this.OnBeforeAction(EventArgs.Empty);
+
+            // Invert the image
+            BitmapHelper.Invert(this.Image);
+
+            // Raise after action event
+            this.OnAfterAction(EventArgs.Empty);
+        }
+
         #endregion
 
         #region Event Handlers
@@ -277,6 +294,11 @@ namespace ABSpriteEditor.Controls
         private void rollDownToolStripButton_Click(object sender, EventArgs e)
         {
             this.RollDown();
+        }
+
+        private void invertToolStripButton_Click(object sender, EventArgs e)
+        {
+            this.Invert();
         }
 
         #endregion
