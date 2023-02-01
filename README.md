@@ -6,6 +6,7 @@
 * [Licence](#Licence)
 	* [Licence Permissions](#Licence-Permissions)
 * [Platforms](#Platforms)
+	* [Note for Mac Users](#Note-for-Mac-Users)
 * [Contributing](#Contributing)
 	* [Feature Requests](#Feature-Requests)
 	* [Code Contributions](#Code-Contributions)
@@ -45,9 +46,25 @@ You **must**
 
 ## Platforms
 
-At the moment, only Windows binaries are provided.
+Windows binaries are provided by myself. (I.e. the author of the repo, @Pharap.)
 
-If you wish to volunteer to provide binaries for other platforms (e.g. compiled with Mono) then please raise an issue.
+Mac binaries are provided based on the availability of someone to contribute them.
+
+At the time of writing (2023-02-01) the only contributor of Mac binaries is @ArdFlamingo and the only binary available is for [v0.5.0-beta](https://github.com/Pharap/ABSpriteEditor/releases/tag/v0.5.0-beta).
+
+If you (the reader) wish to volunteer to provide binaries for other platforms (e.g. compiled with Mono, Wine, et cetera) then please either raise an issue or contact me via other means.
+
+**Disclaimer**: I (the author of the repo, @Pharap,) take no responsibility for the quality of executables contributed by others as I have no means to test them.
+
+### Note for Mac Users
+
+I have been told by @ArdFlamingo that it may be necessary to run the following `xattr` command on the Mac executable:
+```cpp
+xattr -cr "<path-to>/AB Sprite Editor.app"
+```
+Where `<path-to>` must be replaced with the necessary path to reach the extracted `AB Sprite Editor.app`.
+
+(For more on `xattr` see [ss64's article](https://ss64.com/osx/xattr.html).)
 
 ## Contributing
 
